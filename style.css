@@ -28,14 +28,14 @@
     font-size: 15px;
     box-shadow: 1px 1px 10px gold;
     text-align: center;
-    align-content: center;
+    margin-left: 200px;
     display: none;
 }
 #notFound span{
     color: gold;
 }
 #foodShow{
-    margin: 0px 380px;
+    margin: 0px 360px;
     color:tomato;
     
 }
