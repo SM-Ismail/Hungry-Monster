@@ -1,0 +1,34 @@
+
+#idBigDiv{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: auto;
+    align-content: center;
+}
+.food{
+    width: 300px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px gold;
+    text-align: center;
+}
+.food img{
+    width: 100%;
+    padding:2px;
+    /* overflow: hidden; */
+}
+#notFound{
+    border: 2px solid gold;
+    border-radius: 10px;
+    background-image: url("jimmy-dean-unsplash.jpg");
+    color: brown;
+    font-size: 15px;
+    box-shadow: 1px 1px 10px gold;
+}
+#notFound span{
+    color: gold;
+}
+#foodShow{
+    text-align: center;
+}
