@@ -17,7 +17,10 @@ const searchByFoodName = foodName => {
         notFound.innerHTML= `
             <h2>Couldn't find your search. Aren't you <span>HUNGRY</span>? Search for your favorite food with the name of the dish or it's category  or even with the origin area of the dish. Guten Apetit!</h2>
             `;
+        document.getElementById("showArea").style.display = 'none';
+        document.getElementById('idBigDiv').style.display = 'none';
         document.getElementById('notFound').style.display = 'block';
+
     })
 }
 const notFound = document.createElement('div');
