@@ -14,14 +14,15 @@ const searchByFoodName = foodName => {
         document.getElementById("idBigDiv").appendChild(divFood);        
     })
     .catch(err => {
-        const notFound = document.createElement('div');
-        notFound.id = 'notFound';
         notFound.innerHTML= `
             <h2>Couldn't find your search. Aren't you <span>HUNGRY</span>? Search for your favorite food with the name of the dish or it's category  or even with the origin area of the dish. Guten Apetit!</h2>
             `;
-        document.getElementById('container').appendChild(notFound);
+        document.getElementById('notFound').style.display = 'block';
     })
 }
+const notFound = document.createElement('div');
+notFound.id = 'notFound';
+document.getElementById('container').appendChild(notFound);
 const searchByCategory = category => {
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}
     `)
@@ -67,14 +68,23 @@ document.getElementById('idBigDiv').addEventListener('click', function(event){
             <img src = "${data.meals[0].strMealThumb}">
             <h2>${getName}</h2>
             <h3>Category: ${foodCategory}</h2>
-            <h3>Area of Origin: ${foodArea}</h3>
+            <h3>Origin: ${foodArea}</h3>
+            <h4>Ingreditents:</h4>
+            <ul> 
+                <li>${data.meals[0].strIngredient1}</li> 
+                <li>${data.meals[0].strIngredient2}</li> 
+                <li>${data.meals[0].strIngredient3}</li>
+                <li>${data.meals[0].strIngredient4}</li> 
+                <li>${data.meals[0].strIngredient5}</li>
+                <li>${data.meals[0].strIngredient6}</li> 
+                <li>${data.meals[0].strIngredient7}</li>
+            </ul>            
         `;
+
     });
 });
 
 document.getElementById("button").addEventListener('click', function(){
     const inputRead = document.getElementById("input").value;
-    searchByArea(inputRead);
-    console.log(inputRead);
-    
+    searchByArea(inputRead);    
 });

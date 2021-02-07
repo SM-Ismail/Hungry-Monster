@@ -21,14 +21,21 @@
 #notFound{
     border: 2px solid gold;
     border-radius: 10px;
-    background-image: url("jimmy-dean-unsplash.jpg");
+    background-color: honeydew;
+    height: 300px;
+    width: 70%;
     color: brown;
     font-size: 15px;
     box-shadow: 1px 1px 10px gold;
+    text-align: center;
+    align-content: center;
+    display: none;
 }
 #notFound span{
     color: gold;
 }
 #foodShow{
-    text-align: center;
+    margin: 0px 380px;
+    color:tomato;
+    
 }
